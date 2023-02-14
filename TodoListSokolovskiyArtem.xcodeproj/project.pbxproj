@@ -17,6 +17,12 @@
 		71BF914A2998CFDE0083F736 /* TodoListSokolovskiyArtemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91492998CFDE0083F736 /* TodoListSokolovskiyArtemTests.swift */; };
 		71BF91542998CFDE0083F736 /* TodoListSokolovskiyArtemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91532998CFDE0083F736 /* TodoListSokolovskiyArtemUITests.swift */; };
 		71BF91562998CFDE0083F736 /* TodoListSokolovskiyArtemUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91552998CFDE0083F736 /* TodoListSokolovskiyArtemUITestsLaunchTests.swift */; };
+		71BF91632998D4D30083F736 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91622998D4D30083F736 /* TaskManager.swift */; };
+		71BF91652998D6A20083F736 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91642998D6A20083F736 /* TaskModel.swift */; };
+		71BF91672998D80E0083F736 /* Priorities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91662998D80E0083F736 /* Priorities.swift */; };
+		71BF91692998E7700083F736 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91682998E7700083F736 /* TaskController.swift */; };
+		71BF916B2998E9340083F736 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF916A2998E9340083F736 /* TaskTableViewCell.swift */; };
+		71BF916D29994F400083F736 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF916C29994F400083F736 /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		71BF914F2998CFDE0083F736 /* TodoListSokolovskiyArtemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListSokolovskiyArtemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BF91532998CFDE0083F736 /* TodoListSokolovskiyArtemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListSokolovskiyArtemUITests.swift; sourceTree = "<group>"; };
 		71BF91552998CFDE0083F736 /* TodoListSokolovskiyArtemUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListSokolovskiyArtemUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		71BF91622998D4D30083F736 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		71BF91642998D6A20083F736 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		71BF91662998D80E0083F736 /* Priorities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priorities.swift; sourceTree = "<group>"; };
+		71BF91682998E7700083F736 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		71BF916A2998E9340083F736 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		71BF916C29994F400083F736 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +113,12 @@
 		71BF912E2998CFDB0083F736 /* TodoListSokolovskiyArtem */ = {
 			isa = PBXGroup;
 			children = (
-				71BF912F2998CFDB0083F736 /* AppDelegate.swift */,
-				71BF91312998CFDB0083F736 /* SceneDelegate.swift */,
-				71BF91332998CFDB0083F736 /* ViewController.swift */,
+				71BF916E2999702B0083F736 /* Support */,
+				71BF916F2999703A0083F736 /* View */,
+				71BF9172299970730083F736 /* Controller */,
+				71BF9170299970510083F736 /* Model */,
+				71BF9173299970850083F736 /* Managers */,
+				71BF9171299970620083F736 /* Helpers */,
 				71BF91352998CFDB0083F736 /* Main.storyboard */,
 				71BF913B2998CFDE0083F736 /* Assets.xcassets */,
 				71BF913D2998CFDE0083F736 /* LaunchScreen.storyboard */,
@@ -128,6 +143,57 @@
 				71BF91552998CFDE0083F736 /* TodoListSokolovskiyArtemUITestsLaunchTests.swift */,
 			);
 			path = TodoListSokolovskiyArtemUITests;
+			sourceTree = "<group>";
+		};
+		71BF916E2999702B0083F736 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				71BF912F2998CFDB0083F736 /* AppDelegate.swift */,
+				71BF91312998CFDB0083F736 /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		71BF916F2999703A0083F736 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71BF91332998CFDB0083F736 /* ViewController.swift */,
+				71BF916A2998E9340083F736 /* TaskTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		71BF9170299970510083F736 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71BF91642998D6A20083F736 /* TaskModel.swift */,
+				71BF91662998D80E0083F736 /* Priorities.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		71BF9171299970620083F736 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				71BF916C29994F400083F736 /* DateFormatter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		71BF9172299970730083F736 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				71BF91682998E7700083F736 /* TaskController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		71BF9173299970850083F736 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				71BF91622998D4D30083F736 /* TaskManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +327,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71BF91672998D80E0083F736 /* Priorities.swift in Sources */,
 				71BF91342998CFDB0083F736 /* ViewController.swift in Sources */,
+				71BF916B2998E9340083F736 /* TaskTableViewCell.swift in Sources */,
 				71BF913A2998CFDB0083F736 /* TodoListSokolovskiyArtem.xcdatamodeld in Sources */,
+				71BF916D29994F400083F736 /* DateFormatter.swift in Sources */,
+				71BF91632998D4D30083F736 /* TaskManager.swift in Sources */,
 				71BF91302998CFDB0083F736 /* AppDelegate.swift in Sources */,
+				71BF91652998D6A20083F736 /* TaskModel.swift in Sources */,
+				71BF91692998E7700083F736 /* TaskController.swift in Sources */,
 				71BF91322998CFDB0083F736 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
