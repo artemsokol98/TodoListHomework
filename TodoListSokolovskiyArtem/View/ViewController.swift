@@ -48,19 +48,48 @@ extension ViewController: UITableViewDelegate {
 }
 
 extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        taskController.tasks.count
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        2
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0: return "Completed tasks"
+        case 1: return "Uncompleted tasks"
+        default: return "This section doesn't exist"
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var numberOfRows: Int?
+        switch section {
+        case 0: taskController.taskManager.repository.list(completionHandler: { list, error in
+            numberOfRows = list?.filter { $0.completed == true }.count
+        })
+        case 1: taskController.taskManager.repository.list(completionHandler: { list, error in
+            numberOfRows = list?.filter { $0.completed == false }.count
+        })
+        default: return 0
+        }
+        guard let rows = numberOfRows else { return 0 }
+        return rows
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TaskTableViewCell.identifier, for: indexPath) as? TaskTableViewCell else { return UITableViewCell() }
         cell.checkBoxButtonDelegate = self
-        if let currentTask = taskController.tasks[indexPath.row] as? RegularTask {
-            cell.configureRegularCell(task: currentTask, indexTable: indexPath.row)
-        } else {
-            guard let importantTask = taskController.tasks[indexPath.row] as? ImportantTask else { return UITableViewCell() }
-            cell.configureImportantCell(task: importantTask, indexTable: indexPath.row)
-        }
+        
+        taskController.taskManager.repository.get(id: indexPath.row, completionHandler: { task, error in
+            if let currentTask = task as? RegularTask {
+                cell.configureRegularCell(task: currentTask, indexTable: indexPath.row + indexPath.section * tableView.numberOfRows(inSection: indexPath.section))
+            } else {
+                guard let importantTask = task as? ImportantTask else { return }
+                cell.configureImportantCell(task: importantTask, indexTable: indexPath.row + indexPath.section * tableView.numberOfRows(inSection: indexPath.section))
+            }
+        })
         return cell
     }
 }
@@ -70,6 +99,7 @@ extension ViewController: ICheckBoxButtonDelegate {
     /// Update state of task in TaskController, when user interacts with UI
     func changedState(for task: Int) {
         taskController.updateTask(at: task)
+        tableView.reloadData()
     }
 }
 

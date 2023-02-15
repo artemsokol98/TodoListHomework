@@ -12,7 +12,7 @@ enum Priorities {
     case medium
     case high
     
-    var description: String {
+    var description: CustomStringConvertible {
         switch self {
         case .low:
             return "Low"

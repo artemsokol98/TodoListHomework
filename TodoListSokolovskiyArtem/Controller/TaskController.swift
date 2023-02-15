@@ -8,14 +8,19 @@
 import Foundation
 
 protocol ITaskController {
-    var tasks: [Task] { get set }
+    var taskManager: TaskManager { get set }
     func updateTask(at index: Int)
 }
 
 class TaskController: ITaskController {
-    var tasks = TaskManager.shared.tasks
+    
+    var taskManager: TaskManager
+    
+    init() {
+        taskManager = TaskManager()
+    }
     
     func updateTask(at index: Int) {
-        tasks[index].completed.toggle()
+        //taskManager.repository.edit(<#T##item: TaskRepository.T##TaskRepository.T#>, completionHandler: <#T##(Error?) -> Void#>)
     }
 }

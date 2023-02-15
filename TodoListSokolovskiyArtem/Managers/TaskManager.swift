@@ -7,17 +7,41 @@
 
 import Foundation
 
-class TaskManager {
-    static let shared = TaskManager()
-    var tasks: [Task] = [
-        RegularTask(title: "Buy Milk", completed: true),
-        ImportantTask(priority: .low, title: "Food", completed: true),
-        RegularTask(title: "Buy Car", completed: false),
-        ImportantTask(priority: .medium, title: "Water", completed: false),
-        RegularTask(title: "Meet with Friends", completed: true),
-        ImportantTask(priority: .high, title: "Application", completed: true),
-        RegularTask(title: "Watch Star Wars", completed: false),
-        RegularTask(title: "Feed cat", completed: true),
-        RegularTask(title: "Do homework", completed: false)
-    ]
+protocol ITaskManager {
+    var repository: TaskRepository { get set }
+}
+
+class TaskManager: ITaskManager {
+    var repository: TaskRepository
+    
+    init() {
+        repository = TaskRepository()
+        repository.create(RegularTask(title: "Buy Milk", completed: true)) { error in
+            print(error ?? "error")
+        }
+        repository.create(ImportantTask(priority: .low, title: "Food", completed: true)) { error in
+            print(error ?? "error")
+        }
+        repository.create(RegularTask(title: "Buy Car", completed: false)) { error in
+            print(error ?? "error")
+        }
+        repository.create(ImportantTask(priority: .medium, title: "Water", completed: false)) { error in
+            print(error ?? "error")
+        }
+        repository.create(RegularTask(title: "Meet with Friends", completed: true)) { error in
+            print(error ?? "error")
+        }
+        repository.create(ImportantTask(priority: .high, title: "Application", completed: true)) { error in
+            print(error ?? "error")
+        }
+        repository.create(RegularTask(title: "Watch Star Wars", completed: false)) { error in
+            print(error ?? "error")
+        }
+        repository.create(RegularTask(title: "Feed cat", completed: true)) { error in
+            print(error ?? "error")
+        }
+        repository.create(RegularTask(title: "Do homework", completed: false)) { error in
+            print(error ?? "error")
+        }
+    }
 }

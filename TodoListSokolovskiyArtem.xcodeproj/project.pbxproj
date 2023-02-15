@@ -7,16 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71179827299D28FA00E1E3AA /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71179826299D28FA00E1E3AA /* TaskRepository.swift */; };
 		71BF91302998CFDB0083F736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF912F2998CFDB0083F736 /* AppDelegate.swift */; };
 		71BF91322998CFDB0083F736 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91312998CFDB0083F736 /* SceneDelegate.swift */; };
 		71BF91342998CFDB0083F736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91332998CFDB0083F736 /* ViewController.swift */; };
-		71BF91372998CFDB0083F736 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BF91352998CFDB0083F736 /* Main.storyboard */; };
-		71BF913A2998CFDB0083F736 /* TodoListSokolovskiyArtem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91382998CFDB0083F736 /* TodoListSokolovskiyArtem.xcdatamodeld */; };
 		71BF913C2998CFDE0083F736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BF913B2998CFDE0083F736 /* Assets.xcassets */; };
 		71BF913F2998CFDE0083F736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BF913D2998CFDE0083F736 /* LaunchScreen.storyboard */; };
-		71BF914A2998CFDE0083F736 /* TodoListSokolovskiyArtemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91492998CFDE0083F736 /* TodoListSokolovskiyArtemTests.swift */; };
-		71BF91542998CFDE0083F736 /* TodoListSokolovskiyArtemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91532998CFDE0083F736 /* TodoListSokolovskiyArtemUITests.swift */; };
-		71BF91562998CFDE0083F736 /* TodoListSokolovskiyArtemUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91552998CFDE0083F736 /* TodoListSokolovskiyArtemUITestsLaunchTests.swift */; };
 		71BF91632998D4D30083F736 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91622998D4D30083F736 /* TaskManager.swift */; };
 		71BF91652998D6A20083F736 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91642998D6A20083F736 /* TaskModel.swift */; };
 		71BF91672998D80E0083F736 /* Priorities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF91662998D80E0083F736 /* Priorities.swift */; };
@@ -43,20 +39,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71179826299D28FA00E1E3AA /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
 		71BF912C2998CFDB0083F736 /* TodoListSokolovskiyArtem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoListSokolovskiyArtem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BF912F2998CFDB0083F736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71BF91312998CFDB0083F736 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		71BF91332998CFDB0083F736 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		71BF91362998CFDB0083F736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		71BF91392998CFDB0083F736 /* TodoListSokolovskiyArtem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoListSokolovskiyArtem.xcdatamodel; sourceTree = "<group>"; };
 		71BF913B2998CFDE0083F736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71BF913E2998CFDE0083F736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71BF91402998CFDE0083F736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71BF91452998CFDE0083F736 /* TodoListSokolovskiyArtemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListSokolovskiyArtemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		71BF91492998CFDE0083F736 /* TodoListSokolovskiyArtemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListSokolovskiyArtemTests.swift; sourceTree = "<group>"; };
 		71BF914F2998CFDE0083F736 /* TodoListSokolovskiyArtemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListSokolovskiyArtemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		71BF91532998CFDE0083F736 /* TodoListSokolovskiyArtemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListSokolovskiyArtemUITests.swift; sourceTree = "<group>"; };
-		71BF91552998CFDE0083F736 /* TodoListSokolovskiyArtemUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListSokolovskiyArtemUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		71BF91622998D4D30083F736 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		71BF91642998D6A20083F736 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		71BF91662998D80E0083F736 /* Priorities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priorities.swift; sourceTree = "<group>"; };
@@ -94,8 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				71BF912E2998CFDB0083F736 /* TodoListSokolovskiyArtem */,
-				71BF91482998CFDE0083F736 /* TodoListSokolovskiyArtemTests */,
-				71BF91522998CFDE0083F736 /* TodoListSokolovskiyArtemUITests */,
 				71BF912D2998CFDB0083F736 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,30 +109,11 @@
 				71BF9170299970510083F736 /* Model */,
 				71BF9173299970850083F736 /* Managers */,
 				71BF9171299970620083F736 /* Helpers */,
-				71BF91352998CFDB0083F736 /* Main.storyboard */,
 				71BF913B2998CFDE0083F736 /* Assets.xcassets */,
 				71BF913D2998CFDE0083F736 /* LaunchScreen.storyboard */,
 				71BF91402998CFDE0083F736 /* Info.plist */,
-				71BF91382998CFDB0083F736 /* TodoListSokolovskiyArtem.xcdatamodeld */,
 			);
 			path = TodoListSokolovskiyArtem;
-			sourceTree = "<group>";
-		};
-		71BF91482998CFDE0083F736 /* TodoListSokolovskiyArtemTests */ = {
-			isa = PBXGroup;
-			children = (
-				71BF91492998CFDE0083F736 /* TodoListSokolovskiyArtemTests.swift */,
-			);
-			path = TodoListSokolovskiyArtemTests;
-			sourceTree = "<group>";
-		};
-		71BF91522998CFDE0083F736 /* TodoListSokolovskiyArtemUITests */ = {
-			isa = PBXGroup;
-			children = (
-				71BF91532998CFDE0083F736 /* TodoListSokolovskiyArtemUITests.swift */,
-				71BF91552998CFDE0083F736 /* TodoListSokolovskiyArtemUITestsLaunchTests.swift */,
-			);
-			path = TodoListSokolovskiyArtemUITests;
 			sourceTree = "<group>";
 		};
 		71BF916E2999702B0083F736 /* Support */ = {
@@ -192,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				71BF91622998D4D30083F736 /* TaskManager.swift */,
+				71179826299D28FA00E1E3AA /* TaskRepository.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -302,7 +274,6 @@
 			files = (
 				71BF913F2998CFDE0083F736 /* LaunchScreen.storyboard in Resources */,
 				71BF913C2998CFDE0083F736 /* Assets.xcassets in Resources */,
-				71BF91372998CFDB0083F736 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,8 +301,8 @@
 				71BF91672998D80E0083F736 /* Priorities.swift in Sources */,
 				71BF91342998CFDB0083F736 /* ViewController.swift in Sources */,
 				71BF916B2998E9340083F736 /* TaskTableViewCell.swift in Sources */,
-				71BF913A2998CFDB0083F736 /* TodoListSokolovskiyArtem.xcdatamodeld in Sources */,
 				71BF916D29994F400083F736 /* DateFormatter.swift in Sources */,
+				71179827299D28FA00E1E3AA /* TaskRepository.swift in Sources */,
 				71BF91632998D4D30083F736 /* TaskManager.swift in Sources */,
 				71BF91302998CFDB0083F736 /* AppDelegate.swift in Sources */,
 				71BF91652998D6A20083F736 /* TaskModel.swift in Sources */,
@@ -344,7 +315,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71BF914A2998CFDE0083F736 /* TodoListSokolovskiyArtemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,8 +322,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71BF91562998CFDE0083F736 /* TodoListSokolovskiyArtemUITestsLaunchTests.swift in Sources */,
-				71BF91542998CFDE0083F736 /* TodoListSokolovskiyArtemUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,14 +341,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		71BF91352998CFDB0083F736 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				71BF91362998CFDB0083F736 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		71BF913D2998CFDE0083F736 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -517,7 +477,6 @@
 				INFOPLIST_FILE = TodoListSokolovskiyArtem/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -544,7 +503,6 @@
 				INFOPLIST_FILE = TodoListSokolovskiyArtem/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -672,19 +630,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		71BF91382998CFDB0083F736 /* TodoListSokolovskiyArtem.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				71BF91392998CFDB0083F736 /* TodoListSokolovskiyArtem.xcdatamodel */,
-			);
-			currentVersion = 71BF91392998CFDB0083F736 /* TodoListSokolovskiyArtem.xcdatamodel */;
-			path = TodoListSokolovskiyArtem.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 71BF91242998CFDB0083F736 /* Project object */;
 }
