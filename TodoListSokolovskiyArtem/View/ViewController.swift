@@ -90,6 +90,7 @@ extension ViewController: ICheckBoxButtonDelegate {
 }
 
 extension ViewController: ITodoListViewProtocol {
+	/// Push data from Presenter to View
 	func render(viewData: ViewData) {
 		self.heightForRow = viewData.heightForRow
 	}
