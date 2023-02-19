@@ -7,45 +7,24 @@
 
 import Foundation
 
-protocol Repository {
-    associatedtype T
-    
-    func create(_ item: T, completionHandler: (Error?)->Void)
-    func get(id: Int, completionHandler: (T?, Error?)->Void)
-    func list(completionHandler: ([T]?, Error?)->Void)
-    func delete(_ item: T, completionHandler: (Error?)->Void)
-    func edit(_ item: T, completionHandler: (Error?)->Void)
+protocol IRepository {
+	func getAllTasks() -> [Task]
 }
 
-class TaskRepository: Repository {
-    typealias T = Task
-
-    private var dataSource: [T]?
-    
-    
-    /// add new element
-    func create(_ item: T, completionHandler: (Error?)->Void) {
-        dataSource?.append(item)
-    }
-    
-    /// get one element
-    func get(id: Int, completionHandler: (T?, Error?)->Void) {
-        let item = dataSource?[id]
-        completionHandler(item, nil)
-    }
-    
-    /// get all elements
-    func list(completionHandler: ([T]?, Error?)->Void) {
-        completionHandler(dataSource, nil)
-    }
-
-    /// delete element
-    func delete(_ item: T, completionHandler: (Error?)->Void) {
-        
-    }
-    
-    /// edit element
-    func edit(_ item: T, completionHandler: (Error?)->Void) {
-        
-    }
+class TaskRepository: IRepository {
+	
+	/// Get tasks from stub in repository
+	func getAllTasks() -> [Task] {
+		[
+			RegularTask(title: "Buy Milk", completed: true),
+			ImportantTask(priority: .low, title: "Food", completed: true),
+			RegularTask(title: "Buy Car", completed: false),
+			ImportantTask(priority: .medium, title: "Water", completed: false),
+			RegularTask(title: "Meet with Friends", completed: true),
+			ImportantTask(priority: .high, title: "Application", completed: true),
+			RegularTask(title: "Watch Star Wars", completed: false),
+			RegularTask(title: "Feed cat", completed: true),
+			RegularTask(title: "Do homework", completed: false)
+		]
+	}
 }

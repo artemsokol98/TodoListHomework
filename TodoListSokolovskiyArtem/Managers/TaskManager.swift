@@ -8,40 +8,42 @@
 import Foundation
 
 protocol ITaskManager {
-    var repository: TaskRepository { get set }
+	func allTasks() -> [Task]
+	func completedTasks() -> [Task]
+	func uncompletedTasks() -> [Task]
+	func addTasks(tasks: [Task])
 }
 
-class TaskManager: ITaskManager {
-    var repository: TaskRepository
-    
-    init() {
-        repository = TaskRepository()
-        repository.create(RegularTask(title: "Buy Milk", completed: true)) { error in
-            print(error ?? "error")
-        }
-        repository.create(ImportantTask(priority: .low, title: "Food", completed: true)) { error in
-            print(error ?? "error")
-        }
-        repository.create(RegularTask(title: "Buy Car", completed: false)) { error in
-            print(error ?? "error")
-        }
-        repository.create(ImportantTask(priority: .medium, title: "Water", completed: false)) { error in
-            print(error ?? "error")
-        }
-        repository.create(RegularTask(title: "Meet with Friends", completed: true)) { error in
-            print(error ?? "error")
-        }
-        repository.create(ImportantTask(priority: .high, title: "Application", completed: true)) { error in
-            print(error ?? "error")
-        }
-        repository.create(RegularTask(title: "Watch Star Wars", completed: false)) { error in
-            print(error ?? "error")
-        }
-        repository.create(RegularTask(title: "Feed cat", completed: true)) { error in
-            print(error ?? "error")
-        }
-        repository.create(RegularTask(title: "Do homework", completed: false)) { error in
-            print(error ?? "error")
-        }
-    }
+final class TaskManager: ITaskManager {
+	private var taskList = [Task]()
+	
+	/// Get all tasks
+	public func allTasks() -> [Task] {
+		taskList
+	}
+	
+	/// Get only completed tasks
+	public func completedTasks() -> [Task] {
+		taskList.filter { $0.completed }
+	}
+	
+	/// Get only uncompleted tasks
+	public func uncompletedTasks() -> [Task] {
+		taskList.filter { !$0.completed }
+	}
+	
+	/// This funciton allows you add one your task
+	public func addTask(task: Task) {
+		taskList.append(task)
+	}
+	
+	/// This function allows you add one or more tasks like array
+	public func addTasks(tasks: [Task]) {
+		taskList.append(contentsOf: tasks)
+	}
+	
+	/// This function allows remove task
+	public func removeTask(task: Task) {
+		taskList.removeAll { $0 === task }
+	}
 }
