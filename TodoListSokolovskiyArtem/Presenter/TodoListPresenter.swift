@@ -25,6 +25,7 @@ final class TodoListPresenter: ITodoListPresenterProtocol {
 	init(view: ITodoListViewProtocol) {
 		self.view = view
 		configure()
+		view.render(viewData: ViewData(heightForRow: 100.0))
 	}
 	
 	/// Access for taskManager through section
@@ -61,5 +62,5 @@ final class TodoListPresenter: ITodoListPresenterProtocol {
 
 
 struct ViewData {
-	
+	let heightForRow: CGFloat
 }

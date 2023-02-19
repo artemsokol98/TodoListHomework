@@ -12,6 +12,9 @@ final class ViewController: UIViewController {
 	/// Access to presenter
 	var presenter: ITodoListPresenterProtocol!
 	
+	/// Height for row table view
+	var heightForRow: CGFloat!
+	
 	private lazy var tableView: UITableView = {
 		let tableView = UITableView()
 		tableView.delegate = self
@@ -40,7 +43,7 @@ final class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		100.0
+		heightForRow
 	}
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
@@ -88,7 +91,7 @@ extension ViewController: ICheckBoxButtonDelegate {
 
 extension ViewController: ITodoListViewProtocol {
 	func render(viewData: ViewData) {
-		
+		self.heightForRow = viewData.heightForRow
 	}
 }
 
